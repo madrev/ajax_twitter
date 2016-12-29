@@ -22,7 +22,18 @@ const APIUtil = {
       method: "GET",
       data: { query: queryVal }
     })
+  ),
+
+  createTweet: data => (
+    $.ajax({
+      url: '/tweets',
+      dataType: "json",
+      method: "POST",
+      data:  data 
+    })
   )
+
+
 };
 
 module.exports = APIUtil;
